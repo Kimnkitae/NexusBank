@@ -26,6 +26,12 @@ const Deposit = () => {
 
     const handleClickTopUp = () => {
        const numAmount = Number(amount)
+       if(amount < 0) {
+        return
+       }
+       if(yearsSecond < 0) {
+        return
+       }
         if(balance >= numAmount) {
             setDeposit(deposit + numAmount)
             setBalance(balance - numAmount)
@@ -36,6 +42,7 @@ const Deposit = () => {
     
     const handleClickPullOff = () => {
        const numAmount = Number(amount)
+       
         if(balance >= numAmount) {
             setDeposit(deposit - numAmount)
             setBalance(balance + numAmount)

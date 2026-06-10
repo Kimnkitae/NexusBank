@@ -1,8 +1,8 @@
 import { createContext, useState } from 'react'
 
-import Balance from './Balance.jsx'
-import { BalanceContext } from './BalanceContext.jsx'
-import Deposit from './Deposit.jsx'
+import Balance from './bank/Balance.jsx'
+import { BalanceContext } from './bank/BalanceContext.jsx'
+import Deposit from './bank/Deposit.jsx'
 
 import './app.css'
 

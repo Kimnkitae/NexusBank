@@ -10,7 +10,9 @@ const Balance = () => {
 
     const handleClickPlus = () => {
         const numPayment = Number(payment)
-
+        if(payment < 0) {
+            return
+        }
         setBalance(balance + numPayment)
         setPayment('')
         
@@ -19,6 +21,9 @@ const Balance = () => {
     const handleClickMinus = () => {
         const numPayment = Number(payment)
         if(balance <= 0) {
+            return
+        }
+        if(payment > balance) {
             return
         }
         if(numPayment <= balance) {
